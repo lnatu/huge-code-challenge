@@ -1,0 +1,50 @@
+.header {
+  background-color: $white;
+  padding: 2rem 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-bar {
+    display: flex;
+    align-items: center;
+
+    &__dropdown {
+      margin-left: 4.15rem;
+
+      &-toggle {
+        color: $grey;
+      }
+
+      &-text {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-right: 7px;
+      }
+    }
+
+    &__search {
+      margin-left: 32px;
+    }
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-item + &-item {
+    margin-left: 4.15rem;
+  }
+
+  &-link {
+    color: $dark;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.008em;
+
+    display: block;
+  }
+}
