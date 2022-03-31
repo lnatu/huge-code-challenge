@@ -1,12 +1,4 @@
 // Layout
-.block {
-  display: block;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
+@import "../helpers/layout";
+// Spacing
+@import "../helpers/spacing";

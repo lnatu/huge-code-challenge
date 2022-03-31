@@ -1,0 +1,20 @@
+mixin introSection({ thumbUrl, headline, titles, description, link })
+  .intro-inner
+    .flex
+      .intro-thumb
+        img(src=thumbUrl alt='curve svg')
+
+      .intro-content
+        if headline
+          .intro-headline.text-sm-medium=headline
+        .intro-lead
+          each title in titles
+            =title
+            br
+        .intro-sub
+          .intro-description=description
+          .intro-link
+            a.text-sm-medium.text-main.flex-center-y(href='#')
+              span.mr-5=link
+              svg
+                use(xlink:href="/src/assets/images/icons/sprite.svg#icon-rounded-triangle")

@@ -1,9 +1,98 @@
-.hero {
+.intro {
+  &-headline {
+    letter-spacing: -0.02em;
+  }
+
+  &-content {
+    margin-left: 1.5rem;
+    margin-top: 35.5rem;
+  }
+
+  &-thumb {
+    flex: 0 0 57rem;
+  }
+
   &-lead {
     font-size: 5.8rem;
     font-weight: 400;
     line-height: 7rem;
     letter-spacing: -0.03em;
+
     margin: 0;
+  }
+
+  &-sub {
+    border-left: 0.5px solid #8a8a8a;
+
+    min-height: 28.4rem;
+
+    margin-top: 6.3rem;
+    padding-left: 3rem;
+  }
+
+  &-description {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.025em;
+  }
+
+  &-link {
+    margin-top: 1.6rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: transparent;
+      stroke: $main;
+    }
+  }
+}
+
+.team {
+  background-color: $main;
+
+  padding-top: 16.6rem;
+  margin-top: -25rem;
+
+  .intro-content {
+    margin-top: 2rem;
+  }
+
+  .intro-lead {
+    font-size: 7.3rem;
+    line-height: 8.2rem;
+    letter-spacing: -0.03em;
+
+    margin-top: 3rem;
+  }
+
+  .intro-sub {
+    border-color: $grey-2;
+    padding-right: 18rem;
+    margin-top: 10.5rem;
+  }
+
+  .intro-thumb {
+    text-align: center;
+    padding-left: 4rem;
+  }
+
+  .intro-description {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.025em;
+  }
+
+  .intro-link {
+    margin-top: 5rem;
+    margin-left: 2rem;
+
+    a {
+      color: $grey-2;
+    }
+
+    svg {
+      stroke: $grey-2;
+    }
   }
 }

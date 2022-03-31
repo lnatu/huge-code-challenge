@@ -6,3 +6,48 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
 }
+
+// Text colors
+.text-main {
+  color: $main;
+}
+
+.text-white {
+  color: $white;
+}
+
+// Size
+.text-sm {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.text-md {
+  font-size: 3rem;
+  line-height: 3.8rem;
+}
+
+// Weights
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+// Spacing
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+// Custom Text Styles {
+.text-sm-medium {
+  @extend .fw-medium;
+  @extend .text-sm;
+  @extend .tracking-tight;
+}
