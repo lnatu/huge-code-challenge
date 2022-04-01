@@ -1,20 +1,25 @@
-mixin introSection({ thumbUrl, headline, titles, description, link })
+mixin link(label)
+  a.link-with-icon(href='#')
+    span.mr-5=label
+    svg.icon.icon--main
+      use(xlink:href="/src/assets/images/icons/sprite.svg#icon-rounded-triangle")
+
+mixin introSection({ thumbUrl, thumbUrlSmall, headline, titles, description, link })
   .intro-inner
-    .flex
-      .intro-thumb
+    .intro-thumb
+      picture
+        source(media='(min-width: 992px)' srcset=thumbUrl)
+        source(media='(min-width: 320px)' srcset=thumbUrlSmall)
         img(src=thumbUrl alt='curve svg')
 
-      .intro-content
-        if headline
-          .intro-headline.text-sm-medium=headline
-        .intro-lead
-          each title in titles
-            =title
-            br
-        .intro-sub
-          .intro-description=description
-          .intro-link
-            a.text-sm-medium.text-main.flex-center-y(href='#')
-              span.mr-5=link
-              svg
-                use(xlink:href="/src/assets/images/icons/sprite.svg#icon-rounded-triangle")
+    .intro-content
+      if headline
+        .intro-headline.text-sm-medium=headline
+      .intro-lead
+        each title in titles
+          =title
+          br
+      .intro-sub
+        .intro-description=description
+        .intro-link
+          +link(link)

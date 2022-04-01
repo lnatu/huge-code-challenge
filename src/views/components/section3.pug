@@ -1,0 +1,34 @@
+mixin indexes(classes)
+  .featured-indexes(class=classes)
+    .featured-indexes__item.active 01
+    .featured-indexes__item 02
+    .featured-indexes__item 03
+    .featured-indexes__item 04
+
+.featured
+  .featured-inner
+    +indexes
+
+    .featured-content
+      .featured-content__lead
+        .title-xl Our Featured Funds
+        +indexes('featured-indexes--mobile')
+        .featured-content__text Nikko AM ARK Disruptive Innovation Fund
+      .featured-content__graph
+        img(src='/src/assets/images/graph.svg' alt='graph')
+      .featured-content__summary
+        ul.featured-summary__list
+          li.featured-summary__item
+            span.featured-summary__title NAV (per 100 shares)
+            span.featured-summary__text ¥196,977
+          li.featured-summary__item
+            span.featured-summary__title Net Assets
+            span.featured-summary__text 7,309,193 million
+          li.featured-summary__item
+            span.featured-summary__title Day Change
+            span.featured-summary__text - ¥1,094
+          li.featured-summary__item
+            span.featured-summary__title Issued
+            span.featured-summary__text 3,710,686,634 shares
+      .featured-content__redirect
+        +link('Explore more funds')

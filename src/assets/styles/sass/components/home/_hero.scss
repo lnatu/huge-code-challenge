@@ -1,15 +1,51 @@
 .intro {
+  &-inner {
+    display: flex;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
   &-headline {
     letter-spacing: -0.02em;
   }
 
   &-content {
-    margin-left: 1.5rem;
+    padding: 0 1.5rem;
     margin-top: 35.5rem;
+
+    @include breakpoint(xl) {
+      margin-top: 10rem;
+    }
+
+    @include breakpoint(lg) {
+      text-align: right;
+
+      margin-top: -5rem;
+      padding: 0 2.4rem;
+    }
+
+    @include breakpoint(sm) {
+      text-align: left;
+    }
   }
 
   &-thumb {
     flex: 0 0 57rem;
+
+    @include breakpoint(xl) {
+      flex: 1;
+      img {
+        width: 400px;
+      }
+    }
+
+    @include breakpoint(xl) {
+      img {
+        width: auto;
+      }
+    }
   }
 
   &-lead {
@@ -19,6 +55,17 @@
     letter-spacing: -0.03em;
 
     margin: 0;
+
+    @include breakpoint(xl) {
+      font-size: 4rem;
+      line-height: 6rem;
+      letter-spacing: -0.02em;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 2.9rem;
+      line-height: 4.2rem;
+    }
   }
 
   &-sub {
@@ -28,22 +75,45 @@
 
     margin-top: 6.3rem;
     padding-left: 3rem;
+
+    @include breakpoint(lg) {
+      border-left: 0;
+
+      min-height: 0;
+
+      padding-left: 0;
+      padding-bottom: 3rem;
+      margin-top: 2.8rem;
+    }
   }
 
   &-description {
     font-size: 3rem;
     line-height: 3.8rem;
     letter-spacing: -0.025em;
+
+    @include breakpoint(lg) {
+      color: rgba($grey-3, 0.5);
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+    }
   }
 
   &-link {
     margin-top: 1.6rem;
 
-    svg {
-      width: 2.4rem;
-      height: 2.4rem;
-      fill: transparent;
-      stroke: $main;
+    @include breakpoint(lg) {
+      margin-top: 2.4rem;
+
+      a {
+        justify-content: flex-end;
+      }
+    }
+
+    @include breakpoint(sm) {
+      a {
+        justify-content: flex-start;
+      }
     }
   }
 }
@@ -54,8 +124,19 @@
   padding-top: 16.6rem;
   margin-top: -25rem;
 
+  @include breakpoint(xl) {
+    margin-top: 0;
+    padding-top: 6.4rem;
+    padding-bottom: 8.7rem;
+  }
+
   .intro-content {
     margin-top: 2rem;
+    text-align: left;
+
+    @include breakpoint(lg) {
+      margin-top: 5.5rem;
+    }
   }
 
   .intro-lead {
@@ -64,17 +145,45 @@
     letter-spacing: -0.03em;
 
     margin-top: 3rem;
+
+    @include breakpoint(lg) {
+      font-size: 4.2rem;
+      line-height: 4.8rem;
+      letter-spacing: -0.02em;
+
+      margin-top: 4rem;
+    }
   }
 
   .intro-sub {
     border-color: $grey-2;
     padding-right: 18rem;
+
     margin-top: 10.5rem;
+
+    @include breakpoint(lg) {
+      padding: 0;
+      margin-top: 4.8rem;
+    }
+  }
+
+  .intro-description {
+    @include breakpoint(lg) {
+      color: $grey-2;
+    }
   }
 
   .intro-thumb {
     text-align: center;
     padding-left: 4rem;
+
+    @include breakpoint(lg) {
+      padding-left: 0;
+
+      img {
+        width: 32.7rem;
+      }
+    }
   }
 
   .intro-description {
@@ -89,10 +198,15 @@
 
     a {
       color: $grey-2;
+      justify-content: flex-start;
     }
 
     svg {
       stroke: $grey-2;
+    }
+
+    @include breakpoint(lg) {
+      margin-left: 0;
     }
   }
 }
