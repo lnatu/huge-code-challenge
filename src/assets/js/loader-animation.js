@@ -18,9 +18,10 @@ $(function () {
 
   progressTl
     // tween the progress bar width
-    .to($(".loader-progress"), 1, {
+    .to(".loader-progress", {
       width: "calc(100% - 3px)",
       ease: Linear.easeNone,
+      duration: 1,
     });
 
   function loadProgress() {
@@ -30,9 +31,10 @@ $(function () {
     loadingProgress = loadedCount / imagesToLoad;
 
     //  GSAP tween of progress bar timeline
-    gsap.to(progressTl, 0.7, {
+    gsap.to(progressTl, {
       progress: loadingProgress,
       ease: Linear.easeNone,
+      duration: 0.7,
     });
   }
 
@@ -41,7 +43,7 @@ $(function () {
     // the percentage loaded based on the tween's progress
     loadingProgress = Math.round(progressTl.progress() * 100);
 
-    // we put the percentage in the screen
+    // put the percentage in the screen
     $(".loader-text").text(loadingProgress + "%");
   }
 

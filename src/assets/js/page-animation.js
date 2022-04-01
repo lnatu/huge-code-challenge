@@ -55,13 +55,17 @@ $(function () {
 
   $(featuredItem).on("click", function () {
     if (!renderCompleted) return;
-
     renderCompleted = false;
+
+    const index = +$(this).data("index");
 
     featuredItem.removeClass("active");
     $(this).addClass("active");
 
-    const getData = data[+$(this).data("index")];
+    // Add active class for mobile
+    $(`.featured-indexes__item[data-index=${index}]`).addClass("active");
+
+    const getData = data[index];
 
     gsap.fromTo(
       ".featured-content .js-stagger",

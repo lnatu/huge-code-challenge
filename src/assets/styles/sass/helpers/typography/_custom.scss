@@ -1,0 +1,21 @@
+.text-sm-medium {
+  @extend .fw-medium;
+  @extend .text-sm;
+  @extend .tracking-tight;
+}
+
+.link-with-icon {
+  display: flex;
+  align-items: center;
+
+  color: $main;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+
+  @include breakpoint(sm) {
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+  }
+}
