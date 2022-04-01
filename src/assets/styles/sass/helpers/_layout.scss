@@ -1,0 +1,26 @@
+// Block
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-center-y {
+  @extend .flex;
+  @extend .items-center;
+}

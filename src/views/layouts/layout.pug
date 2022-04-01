@@ -16,10 +16,17 @@ html(lang="en")
     
     include header
     
-    main
+    main.main.smooth-content
       block content
-    
 
+    include ../components/loader
 
     // Scripts
+    script(src='/src/assets/js/lib/jquery.min.js')
+    script(src='/src/assets/js/lib/image-loaded.min.js')
+    script(src="/src/assets/js/lib/gsap/gsap.min.js")
+    script(src="/src/assets/js/lib/gsap/ScrollTrigger.min.js")
+    script(src='/src/assets/js/loader-animation.js')
+    script(src='/src/assets/js/page-animation.js')
+    script(src='/src/assets/js/main.js')
     block body_end

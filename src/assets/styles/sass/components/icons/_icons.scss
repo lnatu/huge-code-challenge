@@ -1,0 +1,10 @@
+.icon {
+  fill: transparent;
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  &.icon--main {
+    stroke: $main;
+  }
+}

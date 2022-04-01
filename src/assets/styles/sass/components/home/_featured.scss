@@ -1,0 +1,213 @@
+.featured {
+  padding-top: 18rem;
+  padding-bottom: 4.8rem;
+  position: relative;
+  z-index: 2;
+
+  @include breakpoint(lg) {
+    padding-top: 6.4rem;
+  }
+
+  &-inner {
+    display: flex;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  &-indexes {
+    flex: 0 0 59rem;
+    text-align: right;
+    padding-right: 10.5rem;
+    padding-top: 2rem;
+
+    &__item {
+      font-size: 15rem;
+      line-height: 13.2rem;
+      letter-spacing: -0.03em;
+      color: $main;
+      cursor: pointer;
+
+      transition: opacity 0.5s;
+
+      & + & {
+        margin-top: 4.8rem;
+      }
+
+      &:not(.active) {
+        opacity: 0.1;
+      }
+    }
+
+    @include breakpoint(xl) {
+      flex: 1;
+      padding-top: 0;
+    }
+
+    @include breakpointUp(lg) {
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @include breakpointMix(smlg) {
+      &--mobile {
+        justify-content: center;
+      }
+    }
+
+    @include breakpoint(lg) {
+      display: none;
+
+      &--mobile {
+        display: flex;
+
+        margin-top: 4rem;
+        padding-right: 0;
+      }
+
+      &__item {
+        font-size: 5.2rem;
+        line-height: 6rem;
+        letter-spacing: -0.03em;
+
+        & + & {
+          margin-top: 0;
+          margin-left: 2.4rem;
+        }
+      }
+    }
+  }
+
+  &-content {
+    @include breakpoint(lg) {
+      display: flex;
+      flex-direction: column;
+
+      padding: 0 2.4rem;
+    }
+
+    &__lead {
+      max-width: 47.2rem;
+      width: 100%;
+
+      @include breakpointMix(smlg) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    }
+
+    &__graph {
+      margin-top: 4rem;
+      padding-right: 2rem;
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(lg) {
+        text-align: center;
+        padding: 0;
+
+        order: 2;
+
+        img {
+          width: 32.6rem;
+        }
+      }
+    }
+
+    &__text {
+      color: $main;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      letter-spacing: -0.03em;
+
+      margin-top: 6.3rem;
+
+      @include breakpoint(lg) {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        letter-spacing: -0.02em;
+
+        margin-top: 4rem;
+      }
+    }
+
+    &__summary {
+      margin-top: 7.5rem;
+
+      max-width: 31.6rem;
+      width: 100%;
+
+      @include breakpointMix(smlg) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include breakpoint(lg) {
+        order: 1;
+        margin-top: 2.4rem;
+      }
+    }
+
+    &__redirect {
+      margin-top: 5.6rem;
+      margin-left: 1rem;
+
+      @include breakpoint(lg) {
+        order: 3;
+
+        margin-top: 3.2rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-summary {
+    &__item {
+      border-top: 1px solid $grey;
+
+      color: #8a8a8a;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      letter-spacing: -0.02em;
+
+      padding: 1.6rem 0;
+
+      &:last-child {
+        border-bottom: 1px solid $grey;
+      }
+
+      @include breakpoint(md) {
+        border-top: 0;
+
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: -0.025em;
+
+        padding: 0;
+
+        & + & {
+          margin-top: 8px;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &__title {
+      color: $dark;
+      font-weight: 500;
+    }
+
+    &__text {
+      color: $grey;
+      margin-left: 1.6rem;
+    }
+  }
+}

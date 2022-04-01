@@ -1,0 +1,8 @@
+.main {
+  overflow-y: hidden;
+
+  @include breakpointUp(xxl) {
+    max-width: $xxl;
+    margin: 0 auto;
+  }
+}

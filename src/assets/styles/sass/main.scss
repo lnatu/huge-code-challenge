@@ -1,3 +1,17 @@
-body {
-  background-color: gold;
-}
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/global/loader";
+@import "components/icons/icons";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/layout";
+
+@import "pages/home";

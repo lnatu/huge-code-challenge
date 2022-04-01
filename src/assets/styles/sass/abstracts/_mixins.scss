@@ -1,0 +1,77 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == xl {
+    @media only screen and (max-width: $xl) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (max-width: $lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (max-width: $md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media only screen and (max-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs {
+    @media only screen and (max-width: $xs) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpointUp($breakpoint) {
+  @if $breakpoint == xxl {
+    @media only screen and (min-width: $xxl) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xs {
+    @media only screen and (min-width: $xs) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpointMix($breakpoint) {
+  @if $breakpoint == smlg {
+    @media only screen and (min-width: $sm) and (max-width: $lg) {
+      @content;
+    }
+  }
+}

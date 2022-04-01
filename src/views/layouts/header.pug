@@ -1,2 +1,52 @@
-header
-  p header ne
+-
+  var navLinks = [
+    {
+      label: 'About us',
+      link: '#'
+    },
+    {
+      label: 'Sustainability',
+      link: '#'
+    },
+    {
+      label: 'Insights & News',
+      link: '#'
+    },
+    {
+      label: 'Strategies',
+      link: '#'
+    },
+    {
+      label: 'Funds',
+      link: '#'
+    },
+    {
+      label: 'How to Invest',
+      link: '#'
+    }
+  ]
+
+header.header
+  .container
+    nav.nav
+      .nav-brand
+        a.block(href='#')
+          img.block(src='/src/assets/images/logo.svg' alt='nikkoam logo')
+      .flex.items-center
+        .nav-bar#navBar
+          ul.nav-list
+            each link in navLinks
+              li.nav-item
+                a(href=link.link).nav-link=link.label
+
+          .nav-bar__dropdown
+            a.flex.items-center.nav-bar__dropdown-toggle(href='#')
+              span.nav-bar__dropdown-text Singapore
+              img(src='/src/assets/images/icons/triangle-down.svg' alt='icon')
+
+        .nav-bar__search
+          a.block(href='#')
+            img.block(src='/src/assets/images/icons/search.svg' alt='icon')
+        .nav-bar__toggle(target='#navBar')
+          span
+          span
