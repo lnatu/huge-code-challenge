@@ -4,22 +4,25 @@ mixin link(label)
     svg.icon.icon--main
       use(xlink:href="/src/assets/images/icons/sprite.svg#icon-rounded-triangle")
 
-mixin introSection({ thumbUrl, thumbUrlSmall, headline, titles, description, link })
+mixin introSection({ thumbUrl, thumbUrlSmall, headline, titles, description, link, svg })
   .intro-inner
     .intro-thumb
-      picture
-        source(media='(min-width: 992px)' srcset=thumbUrl)
-        source(media='(min-width: 320px)' srcset=thumbUrlSmall)
-        img(src=thumbUrl alt='curve svg')
+      if svg
+        include ../svg/big-rounded-wave
+      else
+        picture.block
+          source(media='(min-width: 992px)' srcset=thumbUrl)
+          source(media='(min-width: 320px)' srcset=thumbUrlSmall)
+          img(src=thumbUrl alt='curve svg')
 
     .intro-content
       if headline
-        .intro-headline.text-sm-medium=headline
-      .intro-lead
+        .intro-headline.text-sm-medium.js-stagger=headline
+      .intro-lead.js-stagger
         each title in titles
-          =title
+          span=title
           br
       .intro-sub
-        .intro-description=description
-        .intro-link
+        .intro-description.js-stagger=description
+        .intro-link.js-stagger
           +link(link)

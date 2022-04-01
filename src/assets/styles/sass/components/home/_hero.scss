@@ -33,6 +33,8 @@
 
   &-thumb {
     flex: 0 0 57rem;
+    transition: transform 1s cubic-bezier(0.28, 0.8, 0.59, 1.2);
+    transform: translateY(var(--move));
 
     @include breakpoint(xl) {
       flex: 1;
@@ -124,6 +126,9 @@
   padding-top: 16.6rem;
   margin-top: -25rem;
 
+  position: relative;
+  z-index: 2;
+
   @include breakpoint(xl) {
     margin-top: 0;
     padding-top: 6.4rem;
@@ -208,5 +213,26 @@
     @include breakpoint(lg) {
       margin-left: 0;
     }
+  }
+}
+
+.wave-svg {
+  width: 38rem;
+  height: 38.8rem;
+
+  path {
+    stroke: $grey-2;
+
+    @for $i from 0 through 55 {
+      &:nth-child(#{$i}) {
+        animation: flash 1s linear infinite;
+        animation-delay: $i / 10 + s;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    width: 32.7rem;
+    height: 33.4rem;
   }
 }
