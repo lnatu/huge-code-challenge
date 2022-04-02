@@ -1,7 +1,5 @@
 -
   var data = {
-    thumbUrl: '/src/assets/images/hero-curve.svg',
-    thumbUrlSmall: '/src/assets/images/hero-curve-mobile.svg',
     headline: '',
     titles: ['Progressive Solutions', 'Competitive Performance', 'Global Citizen with Asian DNA'],
     description: 'We’re one of Asia’s largest asset managers.',
@@ -10,3 +8,8 @@
 
 .intro
   +introSection(data)
+    +slot('picture')
+      picture.block
+        source(media='(min-width: 992px)' srcset='/src/assets/images/hero-curve.svg')
+        source(media='(min-width: 320px)' srcset='/src/assets/images/hero-curve-mobile.svg')
+        img(src='/src/assets/images/hero-curve.svg' alt='curve svg')
