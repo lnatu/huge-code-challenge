@@ -312,6 +312,14 @@ template {
   100% {
     opacity: 1; } }
 
+@keyframes bb {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+
 *,
 *::after,
 *::before {
@@ -1752,10 +1760,6 @@ body {
 
 .main {
   overflow: hidden; }
-  @media only screen and (min-width: 120em) {
-    .main {
-      max-width: 120em;
-      margin: 0 auto; } }
 
 .featured {
   padding-top: 18rem;
