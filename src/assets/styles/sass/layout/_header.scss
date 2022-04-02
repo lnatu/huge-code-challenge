@@ -129,7 +129,33 @@
     line-height: 1.6rem;
     letter-spacing: -0.008em;
 
-    display: block;
+    display: inline-block;
+
+    transition: color 0.3s;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: $main;
+
+      width: 0;
+      height: 2px;
+
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color: $main;
+    }
+
+    &:hover::after {
+      width: 66%;
+    }
   }
 
   @include breakpoint(lg) {
